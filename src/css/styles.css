@@ -1,13 +1,16 @@
 body{
     background-color: darkslategrey;
 }
-img{
+.imgcat{
     width: 500px;
     margin-left: 100px;
     margin-top: 50px;
 }
 .cat-info{
     display: flex;
+}
+.error{
+    color: #FF3D00;
 }
 .text-info{
     margin: 50px;

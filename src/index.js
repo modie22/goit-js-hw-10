@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Notiflix from 'notiflix';
+import SlimSelect from 'slim-select'
 axios.defaults.headers.common['x-api-key'] =
   'live_x7TzLieqSraRDcaXJZCGsY2HLqPJH8gA7h6PxDfaSzNzyFEl1j3kzSAtCxSHsLZF';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
@@ -16,7 +16,7 @@ function selecCat(e) {
   removeErrorText();
   elements.blockCat.innerHTML = '';
   fetchCatByBreed(e.currentTarget.value).then(cat => {
-    elements.blockCat.innerHTML = `<img src="${cat[0].url}" alt="123">
+    elements.blockCat.innerHTML = `<img class="imgcat" src="${cat[0].url}" alt="${cat[0].breeds[0].name}">
    <div class="text-info">
    <h1>${cat[0].breeds[0].name}</h1>
    <p>${cat[0].breeds[0].description}</p>
@@ -29,7 +29,6 @@ function selecCat(e) {
 
 function createSelectedCat() {
   fetchBreeds().then(cats => {
-    console.log(cats);
     const optionEl = cats
       .map(({ name, id }) => {
         return `
