@@ -8,6 +8,7 @@ function fetchBreeds() {
     .get('https://api.thecatapi.com/v1/breeds')
     .then(response => response.data)
     .catch(error => {
+    Notiflix.Report.failure('Oops! Something went wrong! Try reloading the page!');
     removeclassLoader();
     addErrorText();
       throw error;
@@ -15,9 +16,10 @@ function fetchBreeds() {
 }
 function fetchCatByBreed(breedId) {
   return axios
-    .get(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`)
+    .get(`https://api.thecatapi.com/v1/images/s123earch?breed_ids=${breedId}`)
     .then(response => response.data)
     .catch(error => {
+     Notiflix.Report.failure('Oops! Something went wrong! Try reloading the page!');
       removeclassLoader();
       addErrorText();
       throw error;
