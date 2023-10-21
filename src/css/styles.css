@@ -1,10 +1,14 @@
 body{
-    background-color: darkslategrey;
+    background-color: rgb(65, 62, 62);
 }
 .imgcat{
     width: 500px;
     margin-left: 100px;
     margin-top: 50px;
+    border: 25px solid #24315c;
+    -webkit-box-shadow: 3px 3px 6px 4px #4a0c0c;
+    -moz-box-shadow: 3px 3px 6px 4px #888;
+    box-shadow: 3px 3px 6px 4px #888;
 }
 .cat-info{
     display: flex;
@@ -15,6 +19,7 @@ body{
 .text-info{
     margin: 50px;
     margin-left: 30px;
+    color: azure;
 }
 .loader {
     transform: rotateZ(45deg);
@@ -23,7 +28,7 @@ body{
     width: 48px;
     height: 48px;
     color: #fff;
-    margin-left: 60px;
+    margin-left: 40%;
   }
     .loader:before,
     .loader:after {

@@ -21,7 +21,9 @@
     "axios": "^1.5.1",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",
-    "slim-select": "^2.6.0"
+    "select-pure": "^2.1.4",
+    "slim-select": "^2.6.0",
+    "vanilla-select": "^1.0.25"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
